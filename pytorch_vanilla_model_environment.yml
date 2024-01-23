@@ -1,0 +1,19 @@
+name: pytorch-vanilla-model  # You can choose a relevant name for your environment
+channels:
+  - defaults
+  - pytorch
+  - conda-forge  # conda-forge is added for additional packages
+dependencies:
+  - nvidia::cudatoolkit=11.1  # CUDA toolkit for GPU support
+  - python=3.9  # Python version
+  - pytorch::pytorch=1.9  # PyTorch
+  - pytorch::torchvision=0.10  # Torchvision
+  - numpy=1.20  # Numpy
+  - pandas  # Pandas
+  - matplotlib  # Matplotlib
+  - pip  # Pip is needed to install pip packages
+  - pip:
+    - transformers[torch]  # Transformers with torch support
+    - datasets  # Hugging Face Datasets
+    - huggingface_hub  # Hugging Face Hub
+    - nltk
